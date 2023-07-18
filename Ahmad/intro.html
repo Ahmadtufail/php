@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRO</title>
+</head>
+
+<body>
+    <div id="text1">
+        <h1>Hello World</h1>
+    </div>
+    <br>
+    <button id="btn1">Change it</button>
+    <br>
+    <h1 id="text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, porro quae? Voluptatum suscipit
+        ullam recusandae dolores hic omnis impedit molestias, nihil animi alias neque atque. Quo exercitationem saepe
+        quas quae.</h1>
+    <br>
+    <div>
+        <img id="img2" src="Images/BurgerImage1.png">
+    </div>
+    <br>
+    <h2 id="blin">Blink the text</h2>
+    <button id="bnt">Blink</button>
+    <br>
+    <br>
+    <h1>Task 1:</h1>
+    <h2>
+        Blink The
+        <span id="blink"> Text</span>
+    </h2>
+    <h1>Task 2:</h1>
+    <div id="head">
+        <ol>
+            <li>Asad</li>
+            <li>Ahsass</li>
+        </ol>
+    </div>
+    <input type="button" value="Add Item" onclick="new_element()"/>
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+            function blink(){
+            $("#blink").fadeOut(500)
+            $("#blink").fadeIn(500)
+        }
+        setInterval(blink,1000);
+        function new_element(){
+            $("#head ul").append('<li>Azeem</li>');
+        };
+
+
+        $("#btn1").click(function () {
+            $("#text1").fadeOut(500);
+            $("#text1").text('New Text');
+            $("#text1").fadeIn(500);
+        });
+        $("#text2").click(function () {
+            $(this).hide();
+        });
+        $("#img2").click(function () {
+            $(this).attr("src", "images/BurgerImage2.png");
+        });
+
+    </script>
+</body>
+
+</html>
